@@ -1,0 +1,80 @@
+<div class="primero" *ngIf="mostrar" >
+    <header class="yellow-header" >
+        <div class="buscador">
+            <div class="search-bar">
+              <div>
+                <img src="https://img.youtube.com/vi/asn2OgCLk8s/mqdefault.jpg" alt="Logo" class="logo">
+              </div>
+                <input type="text" class="search-input" placeholder="Buscar productos, marcas y más...">
+            </div>
+            <div>
+            </div>
+            <div class="enlaces">
+                <div class="aparte">
+                    <li><a href="#">Categoria</a></li>
+                </div>
+                <nav>
+                    <ul class="menu">
+                        <li><a href="#">Histrial</a></li>
+                        <li><a href="#">Tienda oficiales</a></li>
+                        <li><a href="#">Ofertas de la semana</a></li>
+                        <li><a href="#">Vender</a></li>
+                        <li><a href="#">Ayuda</a></li>
+                    </ul>
+                </nav>
+                <div class="menu-right">
+                    <a href="#">Eduardo</a>
+                    <a href="#">Mis compras</a>
+                    <a href="#">Favoritos</a>
+                </div>
+            </div>
+        </div>
+      </header>
+      
+      <div class="header-with-carousel">
+        @if (images) {
+        <ngb-carousel>
+            <ng-template ngbSlide>
+              <div class="picsum-img-wrapper">
+                <img [src]="images[0]" alt="Random first slide" class="carousel-image" />
+              </div>
+          
+            </ng-template>
+            <ng-template ngbSlide >
+              <div class="picsum-img-wrapper">
+                <img [src]="images[1]" alt="Random second slide" class="carousel-image" />
+              </div>
+             
+            </ng-template>
+            <ng-template ngbSlide>
+              <div class="picsum-img-wrapper">
+                <img [src]="images[2]" alt="Random third slide" class="carousel-image" />
+              </div>
+             
+            </ng-template >
+          </ngb-carousel>
+        }
+      </div>
+      <main > 
+        <ng-container >
+          <div class="middle-align">
+            <p>Relacionados con tus visitas</p>
+            <span [ngClass]="{'blue-text': true}">ver historial</span>
+          </div>
+        </ng-container>
+        <div class="card-container"  >
+          <mat-card class="example-card" *ngFor="let item of products" (click)="nomostrar()"  routerLink="/descripcion/{{item.id}}" routerLinkActive="active" areaCurrentWhenActive="page"  >
+            <mat-card-header>
+              <img class="cards-img" mat-card-image [src]="item.imagenUrl" alt="Photo of a Shiba Inu">
+            </mat-card-header>
+            <mat-card-content>
+              <div class="product-details">
+                <h4>U$S{{item.precio}}</h4>
+              </div>
+            </mat-card-content>
+          </mat-card>
+        </div>
+      </main>
+  </div>
+  <router-outlet/> 
+ 

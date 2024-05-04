@@ -1,0 +1,70 @@
+<header class="yellow-header" >
+    <div class="buscador">
+        <div class="search-bar">
+          <div>
+            <img src="https://img.youtube.com/vi/asn2OgCLk8s/mqdefault.jpg" alt="Logo" class="logo">
+          </div>
+            <input type="text" class="search-input" placeholder="Buscar productos, marcas y más...">
+        </div>
+        <div>
+        </div>
+        <div class="enlaces">
+            <div class="aparte">
+                <li><a href="#">Categoria</a></li>
+            </div>
+            <nav>
+                <ul class="menu">
+                    <li><a href="#">Histrial</a></li>
+                    <li><a href="#">Tienda oficiales</a></li>
+                    <li><a href="#">Ofertas de la semana</a></li>
+                    <li><a href="#">Vender</a></li>
+                    <li><a href="#">Ayuda</a></li>
+                </ul>
+            </nav>
+            <div class="menu-right">
+                <a href="#">Eduardo</a>
+                <a href="#">Mis compras</a>
+                <a href="#">Favoritos</a>
+            </div>
+        </div>
+    </div>
+  </header>
+<main>
+    <p class="Arriba"><strong>También puede interesarte:</strong> computadora - canaima - antminer s9 - laptop canaima - canaima letras rojas</p>
+  <div class="cardss">
+    <div>
+    <mat-card class="card-pequeña">
+      <mat-card-header *ngIf="compra">
+        <mat-card-title-group>
+          <img [src]="compra?.imagenUrl" alt="Imagen del producto">
+        </mat-card-title-group>
+      </mat-card-header>
+    </mat-card>
+   </div>
+   <div>
+    <mat-card class="card-grande">
+        <mat-card-header *ngIf="compra" >
+          <mat-card-title-group>
+            <img [src]="compra?.imagenUrl" alt="Imagen del producto">
+          </mat-card-title-group>
+        </mat-card-header>
+      </mat-card>
+   </div>
+   <div class="card-text">
+    <mat-card>
+      <mat-card-header>
+        <mat-card-title>{{compra.nombre}}</mat-card-title>
+        <mat-card-subtitle>U$S{{compra.precio}}</mat-card-subtitle>
+      </mat-card-header>
+      <h4>Bs. {{compra.precio*40}} </h4>
+      <p style="color:#1391ff;">Ver los medios de pago</p>
+      <mat-card-actions >
+        <button mat-flat-button color="primary" >Comprar ahora</button>
+      </mat-card-actions>
+    </mat-card>
+   </div>
+  </div>
+
+</main>
+
+ 

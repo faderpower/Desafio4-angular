@@ -1,0 +1,81 @@
+
+  .text{
+    display: flex;
+  }
+  .middle-align {
+    display: flex;
+    justify-content: center;
+  }
+  .yellow-header {
+    background-color: #FBF30C;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .logo {
+    width: 200px; 
+    height: auto; 
+  }
+  .buscador{
+    width: 95vw;
+  }
+    .search-bar {
+      flex: 1; 
+     display: flex;
+    }
+  
+    .search-input {
+      margin-top: 1.2em;
+      width: 30%;
+      height: 35px;
+    }
+  
+    .menu {
+      display: flex;
+      gap: 1rem;
+    }
+  
+    .menu li {
+      list-style: none;
+    }
+  .aparte{
+    list-style: none;
+    margin-left: 2em;
+  }
+    .menu-right {
+      display: flex;
+      gap: 1rem;
+    }
+    a{
+      color: rgb(43, 42, 42);
+      text-decoration: none;
+    }
+    .enlaces {
+      display: flex;
+      justify-content: space-between; 
+      align-items: center;
+    }
+    .Arriba{
+        padding: 15px;
+        background: rgba(143, 143, 143, 0.616);
+    }
+    .card-pequeña{
+        width: 150px;
+      height: 150px;
+      }
+      .card-pequeña img{
+        width: 100px;
+        height: 100px;
+      }
+    .card-grande{
+         max-width: 400px;
+          margin-bottom: 8px;
+          
+    }
+    .cardss{
+      display: flex;
+      justify-content: space-evenly;
+    }
+      
